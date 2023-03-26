@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --color-btn: #7B61FF;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+body {
+    background: #28333F;
+    font-family: 'Poppins';
+}
+
+.App {
+    width: 1000px;
+    
+    font-style: normal;
+    font-weight: 600;
+}
+
+.post {
+    display: flex;
+    padding: 15px;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(90deg, #28333F, #28333F),
+        linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    
+
+}
+
+.post-content {
+    color: white;
+    font-size: 16px;
+}
+
+.post-content-header {
+    font-size: 20px;
+}
+
+.list-items {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+}
