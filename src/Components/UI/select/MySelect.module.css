@@ -1,0 +1,21 @@
+.mySelect {
+    padding:5px 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 300;
+    background-image: linear-gradient(90deg, #28333F, #28333F),
+    linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+background-clip: padding-box, border-box;
+border: 1px solid transparent;
+border-radius: 25px;
+outline: none;
+cursor: pointer;
+color: white;
+margin-top: 20px;
+
+}
+
+.mySelect option {
+    background:#28333F;
+}

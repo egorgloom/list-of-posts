@@ -1,0 +1,14 @@
+.addBtn {
+    background-color: #7B61FF;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border-style: none;
+    cursor: pointer;
+    width: 20%;
+
+}

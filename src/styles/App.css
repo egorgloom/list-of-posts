@@ -20,6 +20,7 @@
 body {
     background: #28333F;
     font-family: 'Poppins';
+    margin: 20px;
 }
 
 .App {
@@ -58,4 +59,9 @@ body {
     font-weight: 600;
     font-size: 40px;
     text-align: center;
+}
+
+.createPost {
+    display: flex;
+    flex-direction: column;
 }
