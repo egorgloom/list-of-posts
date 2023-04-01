@@ -32,7 +32,7 @@ export default function PostForm({create}) {
                     type="text"
                     placeholder='Content'
                 />
-                <AddButton onClick={addNewPost}>Create post</AddButton>
+                <AddButton onClick={addNewPost}>Create</AddButton>
             </form>
         </>
     )

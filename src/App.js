@@ -2,8 +2,11 @@ import React, { useState, useMemo } from 'react'
 import './styles/App.css'
 import PostList from './Components/PostList';
 import PostForm from './Components/PostForm';
-import MySelect from './Components/UI/select/MySelect';
-import MyInput from './Components/UI/input/MyInput';
+
+import PostFilter from './Components/PostFilter';
+import MyModal from './Components/UI/MyModal/MyModal';
+
+import AddButton from './Components/UI/button/AddButton';
 
 
 
@@ -17,51 +20,45 @@ function App() {
     {id: 4, title: 'Yasha', body: 'sherman'},
   ])
 
-  const [selectedSort, setSelectedSort] = useState('');
-  const [searchQuery, setSearchQuery] = useState('')
+
+  const [filter, setFilter] = useState({sort: '', query: ''});
+  const [modal, setModal] = useState(false)
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost])
+    setModal(false)
   }
 
 
   const sortedPosts = useMemo(()=> {
-    if(selectedSort) {
-      return [...posts].sort((a,b) => a[selectedSort].localeCompare(b[selectedSort]))
+    if(filter.sort) {
+      return [...posts].sort((a,b) => a[filter.sort].localeCompare(b[filter.sort]))
     }
     return posts
   },
-   [selectedSort, posts])
+   [filter.sort, posts])
 
   const searchAndSortPosts = useMemo(()=> {
-    return sortedPosts.filter(post => post.title.toLowerCase().includes(searchQuery))
-  }, [sortedPosts, searchQuery])
+    return sortedPosts.filter(post => post.title.toLowerCase().includes(filter.query))
+  }, [sortedPosts, filter.query])
 
   const removePost = (post) => {
     setPosts(posts.filter(elem => elem.id !== post.id))
   }
 
-const sortPosts = (sort) => {
-  setSelectedSort(sort)
-}
+
 
 
   return (
     <div className="App">
+      <AddButton onClick={()=> setModal(true)}>Create post</AddButton>
+      <MyModal 
+      visible={modal}
+      setVisible={setModal}
+      >
       <PostForm create={createPost}/>
-      <MyInput
-      value={searchQuery}
-      onChange={e => setSearchQuery(e.target.value)}
-      placeholder='Search...'
-      />
-      <MySelect
-      value={selectedSort}
-      onChange={sortPosts}
-      defaultValue='Sorting'
-      options={[
-        {value: 'title', name: 'by name'},
-        {value: 'body', name: 'by description'}
-        ]}/>
+      </MyModal>
+      <PostFilter filter={filter} setFilter={setFilter}/>
       <PostList remove={removePost} posts={searchAndSortPosts} title='List of posts'/>
     </div>
   );
