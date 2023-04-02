@@ -28,8 +28,6 @@ export default function PostList({ posts, remove, title }) {
             <PostItem remove={remove} post={post} number={index + 1} />
           </CSSTransition>
         )}
-
-
       </TransitionGroup>
     </>
   )

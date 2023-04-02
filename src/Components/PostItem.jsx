@@ -6,7 +6,7 @@ export default function PostItem(props) {
     <>
       <div className="post">
         <div className="post-content">
-          <strong className='post-content-header'>{props.number}. {props.post.title}</strong>
+          <strong className='post-content-header'>{props.post.id}. {props.post.title}</strong>
           <div>
             {props.post.body}
           </div>

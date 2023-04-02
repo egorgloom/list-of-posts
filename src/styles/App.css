@@ -82,22 +82,54 @@ body {
 
 .post-enter {
     opacity: 0;
-  }
-  .post-enter-active {
+}
+.post-enter-active {
     opacity: 1;
     transition: opacity 500ms ease-in;
-  }
-  .post-exit {
+}
+.post-exit {
     opacity: 1;
-  }
+}
   .post-exit-active {
     opacity: 0;
     transition: opacity 500ms ease-in;
-  }
+}
 
-  .block-loader {
+.block-loader {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-  }
+}
+
+.pagesBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+
+}
+
+.pageBtn {
+    border-radius: 50%;
+    background: #7B61FF;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    width: 40px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pageBtn:hover {
+    transform: scale(1.2);
+}
+
+.pageBtnCurrent {
+    font-weight: bold;
+    transform: scale(1.4);
+    background-color: #F14985;
+}
