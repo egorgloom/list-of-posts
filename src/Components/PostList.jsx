@@ -4,7 +4,7 @@ import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
-import notFound from "../pages/not-found.png"
+import notFound from "../img/not-found.png"
 
 export default function PostList({ posts, remove, title }) {
 

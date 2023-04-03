@@ -1,0 +1,52 @@
+.postIdPages {
+    width: 1000px;
+    color: white;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerPostPage {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 32px;
+}
+
+.blockNamePost h3 {
+    font-size: 32px;
+    margin: 7px 15px;
+}
+
+.titleIdPage {
+    margin: 7px 15px;
+    font-size: 24px;
+}
+
+.containerCommentsPage {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    margin-top: 15px;
+}
+
+.blockCommentsPage {
+    width: 80%;
+    padding: 15px;
+    background-image: linear-gradient(90deg, #28333F, #28333F),
+        linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+    border-radius: 25px;
+}
+
+.blockCommentsPage div:first-child {
+    margin-bottom: 10px;
+    font-style: italic;
+}
