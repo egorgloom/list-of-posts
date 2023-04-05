@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    
+
+
+}
+
+
+h3 {
+    color: white;
+    font-size: 32px;
+    margin-top: 50px;
+}
+p {
+    color: white;
+    font-size: 24px;
+
+}
+
+li {
+    color: white;
+    font-size: 22px;
+    margin-left: 40px;
+    font-weight: normal;
+}
+

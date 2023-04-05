@@ -6,11 +6,6 @@ import MyLoader from '../Components/UI/Loader/MyLoader';
 import classes from '../styles/PostIdPages/PostIdPages.module.css'
 
 
-
-
-
-
-
 export default function PostIdPages() {
     const params = useParams();
     const [post, setPost] = useState({});
@@ -29,6 +24,7 @@ export default function PostIdPages() {
         fetchPostById(params.id)
         fetchComments(params.id)
     }, [])
+
     return (
         <div className={classes.postIdPages}>
             <h1 className={classes.headerPostPage}>you got to the page of the post</h1>
